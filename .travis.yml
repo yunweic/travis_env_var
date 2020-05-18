@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node .
-  - docker tag simple-node stevenchang219/simple-node2:latest
+  - docker build -t simple-node --build-arg NAME=${NAME} .
+  - docker tag simple-node stevenchang219/simple-node3:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push stevenchang219/simple-node2
+  - docker push stevenchang219/simple-node3
