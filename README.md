@@ -1,5 +1,5 @@
 # Overview
-This is a very simple, bare-bones NodeJS project created for you to use with Docker.
+This is a very simple, bare-bones NodeJS project created to test Travis CICD with build time envrionment variable.
 
 # Local Setup
 * Install dependencies: `npm install`

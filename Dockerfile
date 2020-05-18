@@ -17,8 +17,10 @@ COPY . .
 # Bind the port that the image will run on
 EXPOSE 8080
 
+# ARG is only available during build time, it can be passed in via --build-arg during docker build
 ARG NAME
 
+# ENV can be used during container time but you can set ENV with ARG
 ENV INSTRUCTOR_NAME=$NAME
 
 # Define the Docker image's behavior at runtime
