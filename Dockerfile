@@ -19,5 +19,7 @@ EXPOSE 8080
 
 ARG NAME
 
+ENV INSTRUCTOR_NAME=$NAME
+
 # Define the Docker image's behavior at runtime
 CMD ["node", "server.js"]
